@@ -1,5 +1,5 @@
 function Product(id, name, des, price,
-brand, sizes, a_s, quan, date, rev, comm, images){
+brand, sizes, a_s, quan, id_r, author, comm,  images){
     this.ID = id,
     this.name = name,
     this.description = des,
@@ -8,14 +8,13 @@ brand, sizes, a_s, quan, date, rev, comm, images){
     this.sizes = sizes,
     this.active_size = a_s,
     this.quantity = quan,
-    this.date = date,
-    this.reviews = rev,
-    this.comment = comm,                      
+    this.date = new Date();
+    this.reviews = [this.ID = id_r, this.author = author, this.date = new Date(), this.comment = comm, this.rating];                      
     this.images = images
 } 
 
 let guitar = new Product("9008", "Guitar", "El. guitar with2 humbackers", 2353.50,
-"Ibanez",['L','XL','M','XXL'], "L", 293, 2020, "good", "nice guitar", 08989);
-console.log(guitar.name) 
+"Ibanez",['L','XL','M','XXL'], "L", "id_r", "author", "nice guitar", ["08989", "55743957", "11236564"]);
+
 //test
 
